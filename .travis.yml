@@ -1,0 +1,52 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+os: "linux"
+dist: "xenial"
+language: "python"
+
+services:
+- "docker"
+
+install:
+# Install dependencies
+- "pip install ansible ansible-lint yamllint molecule docker"
+
+# Make sure the role is found
+- "pushd .."
+- "ln -s ansible-role-locales mireiawen.locales"
+- "popd"
+
+# Print versions before running
+before_script:
+- "ansible --version"
+- "ansible-lint --version"
+- "yamllint --version"
+- "molecule --version"
+
+stages:
+- "test"
+
+jobs:
+  include:
+
+  # Default test: Debian
+  - stage: "test"
+    name: "Debian"
+    script:
+    - "molecule test"
+
+  # Test: Arch Linux
+  - stage: "test"
+    name: "Arch"
+    script:
+    - "molecule test --scenario-name arch"
+
+  # Test: Ubuntu
+  - stage: "test"
+    name: "Ubuntu"
+    script:
+    - "molecule test --scenario-name ubuntu"
+
+notifications:
+  webhooks: "https://galaxy.ansible.com/api/v1/notifications/"

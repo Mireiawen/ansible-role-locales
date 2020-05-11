@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+locales_package_name: "locales"
+locales_package_state: "latest"
+locales:
+- "en_US.UTF-8"

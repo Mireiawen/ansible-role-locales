@@ -1,0 +1,32 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Set the OS distribution dependent variables"
+  include_vars: "{{ lookup('first_found', possible_files) }}"
+  vars:
+    possible_files:
+    - "vars/{{ ansible_distribution }}.yml"
+    - "vars/{{ ansible_os_family }}.yml"
+    - "vars/default.yml"
+
+- name: "Make sure the locales package is available"
+  package:
+    name: "{{ locales_package_name }}"
+    state: "{{ locales_package_state }}"
+
+- name: "Check /etc/locale.gen"
+  stat:
+    path: "/etc/locale.gen"
+  register: "localegen"
+
+- name: "Make sure /etc/locale.gen exists"
+  file:
+    path: "/etc/locale.gen"
+    state: "touch"
+  when: "not localegen.stat.exists"
+
+- name: "Generate the locales"
+  locale_gen:
+    name: "{{ item }}"
+    state: "present"
+  loop: "{{ locales | flatten(levels=1) }}"
