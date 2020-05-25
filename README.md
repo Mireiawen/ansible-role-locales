@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/Mireiawen/ansible-role-locales.svg?branch=master)](https://travis-ci.com/Mireiawen/ansible-role-locales) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.locales-blueviolet)](https://galaxy.ansible.com/mireiawen/locales)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMireiawen%2Fansible-role-locales.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMireiawen%2Fansible-role-locales?ref=badge_shield)
 
 
 # Locales
@@ -30,3 +31,6 @@ None.
 
 ## License
 MIT, see `LICENSE`
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMireiawen%2Fansible-role-locales.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FMireiawen%2Fansible-role-locales?ref=badge_large)
