@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.com/Mireiawen/ansible-role-locales.svg?branch=master)](https://travis-ci.com/Mireiawen/ansible-role-locales) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.locales-blueviolet)](https://galaxy.ansible.com/mireiawen/locales)
+![Build Status](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/locales?branch=master&style=plastic) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.locales-blueviolet)](https://galaxy.ansible.com/mireiawen/locales)
 
 
 # Locales
 Installs the locales package and generates the desired locales.
 
 ## Requirements
-None.
+Debian -based distribution.
 
 ## Role Variables
 | Variable                | Type   | Default value     | Description                        |
@@ -15,7 +15,8 @@ None.
 | `locales`               | array  | [ `en_US.UTF-8` ] | The locales to generate.           |
 
 ## Dependencies
-None.
+
+* community.general
 
 ## Example Playbook
 ```

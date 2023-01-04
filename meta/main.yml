@@ -2,43 +2,33 @@
 ## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
 
 galaxy_info:
-  author: "Mira \"Mireiawen\" Manninen"
-  role_name: "locales"
-  description: "Generate the desired locales"
+  author: 'Mira "Mireiawen" Manninen'
+  role_name: 'locales'
+  namespace: 'mireiawen'
+  description: 'Generate the desired locales'
+  license: 'MIT'
 
-  license: "MIT"
-
-  min_ansible_version: 2.9
-
+  min_ansible_version: '2.9'
   platforms:
-  - name: "ArchLinux"
+  - name: 'Debian'
     versions:
-    - "any"
-  - name: "Debian"
+    # '10 Buster'
+    - 'buster'
+    # '11 Bullseye'
+    - 'bullseye'
+  - name: 'Ubuntu'
     versions:
-    # "8 Jessie"
-    - "jessie"
-    # "9 Stretch"
-    - "stretch"
-    # "10 Buster"
-    - "buster"
-  - name: "Ubuntu"
-    versions:
-    # "14.04 Trusty"
-    - "trusty"
-    # "16.04 Xenial"
-    - "xenial"
-    # "18.04 Bionic"
-    - "bionic"
-    # "19.10 Eoan"
-    - "eoan"
-    # "20.04 Focal"
-    - "focal"
+    # '18.04 Bionic'
+    - 'bionic'
+    # '20.04 Focal'
+    - 'focal'
+    # '22.04 Jammy'
+    - 'jammy'
 
   galaxy_tags:
-  - "linux"
-  - "system"
-  - "localization"
-  - "locales"
+  - 'linux'
+  - 'system'
+  - 'localization'
+  - 'locales'
 
 dependencies: []

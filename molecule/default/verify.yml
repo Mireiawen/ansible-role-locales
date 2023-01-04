@@ -1,0 +1,16 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: 'Verify'
+  hosts: 'all'
+  tasks:
+  - name: 'Make sure locale is available'
+    ansible.builtin.command: 'locale -a'
+    register: 'result'
+    changed_when: false
+  - name: 'Check the install result'
+    ansible.builtin.assert:
+      that:
+      - '"C" in result.stdout_lines'
+      - '"POSIX" in result.stdout_lines'
+      - '"en_US.utf8" in result.stdout_lines'
