@@ -3,10 +3,10 @@
 role_name_check: 1
 
 dependency:
-  name: "galaxy"
+  name: 'galaxy'
 
 driver:
-  name: "docker"
+  name: 'docker'
 
 platforms:
 - name: 'instance'
@@ -23,21 +23,10 @@ lint: |
   ansible-lint
 
 provisioner:
-  name: "ansible"
+  name: 'ansible'
   playbooks:
-    converge: "converge.yml"
-    verify: "verify.yml"
+    converge: 'converge.yml'
+    verify: 'verify.yml'
 
 verifier:
-  name: "ansible"
-
-scenario:
-  test_sequence:
-  - "lint"
-  - "destroy"
-  - "syntax"
-  - "create"
-  - "converge"
-  - "idempotence"
-  - "verify"
-  - "destroy"
+  name: 'ansible'
