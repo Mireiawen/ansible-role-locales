@@ -26,7 +26,3 @@ provisioner:
   name: 'ansible'
   playbooks:
     converge: 'converge.yml'
-    verify: 'verify.yml'
-
-verifier:
-  name: 'ansible'

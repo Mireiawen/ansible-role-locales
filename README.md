@@ -1,7 +1,7 @@
 ![Build Status](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/locales?branch=master&style=plastic) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.locales-blueviolet?style=plastic)](https://galaxy.ansible.com/mireiawen/locales)
 
 # Locales
-Installs the locales package and generates the desired locales.
+Installs the locales package and generates the desired locales on Debian -based systems.
 
 ## Requirements
 Debian -based distribution.

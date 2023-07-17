@@ -17,17 +17,9 @@ molecule:lint:
   stage: 'lint'
   extends: '.molecule:lint'
 
-molecule:test:
+molecule:test:apt:
   stage: 'test'
   extends: '.molecule:test'
-  parallel:
-    matrix:
-    - distro:
-      - 'ubuntu2204'
-      - 'ubuntu2004'
-      - 'ubuntu1804'
-      - 'debian11'
-      - 'debian10'
 
 molecule:destroy:
   stage: 'destroy'
