@@ -17,9 +17,9 @@ molecule:lint:
   stage: 'lint'
   extends: '.molecule:lint'
 
-molecule:test:apt:
+molecule:test:
   stage: 'test'
-  extends: '.molecule:test'
+  extends: '.molecule:test:apt'
 
 molecule:destroy:
   stage: 'destroy'
